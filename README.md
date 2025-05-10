@@ -9,6 +9,7 @@
 >  By using this plugin, you acknowledge that **you are exposing a potentially sensitive device to the public internet**. It is your responsibility to secure your network and devices.
 
 There are much safer ways to remotely access your OctoPrint server, and I wrote this plugin for personal use, but figured some other users might like to live dangerously as well. 
+That's why it's called "Risky."
 
 Check out NGROK(https://github.com/fieldOfView/OctoPrint-ngrok), Obico(https://github.com/TheSpaghettiDetective/OctoPrint-Obico), or OctoEverywhere(https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere) for the PROPER tools for remote access.
 

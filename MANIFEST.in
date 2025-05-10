@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_RiskyUPnPForward/templates *
+recursive-include octoprint_RiskyUPnPForward/translations *
+recursive-include octoprint_RiskyUPnPForward/static *

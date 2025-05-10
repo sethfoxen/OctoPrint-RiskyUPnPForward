@@ -1,0 +1,30 @@
+# plugin.yaml for Risky UPnP Forward
+
+identifier: riskyupnpforward
+name: Risky UPnP Forward
+version: 0.1.0
+description: >
+  Automatically sets up port forwarding using UPnP to allow external access to OctoPrint. 
+  WARNING: This exposes your OctoPrint instance to the internet. Use only with proper authentication and HTTPS enabled.
+author: Seth Foxen
+license: AGPLv3
+homepage: https://github.com/sethfoxen/OctoPrint-RiskyUPnPForward
+source: https://github.com/sethfoxen/OctoPrint-RiskyUPnPForward
+type: plugin
+compatibility:
+  octoprint:
+    min: 1.5.0
+    max: "*"
+  os:
+    - linux
+    - windows
+    - macos
+tags:
+  - network
+  - upnp
+  - port forwarding
+  - remote access
+  - security
+python: ">=3.7,<4"
+dependencies:
+  - miniupnpc

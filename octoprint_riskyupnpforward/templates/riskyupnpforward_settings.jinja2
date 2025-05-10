@@ -1,0 +1,67 @@
+<div id="settings_plugin_riskyupnpforward" class="plugin-settings">
+
+	<div class="alert alert-warning">
+		<strong>⚠ Warning:</strong> Port forwarding WILL expose your OctoPrint instance to the internet and may make your network vulnerable to attacks. 
+		Only enable this if you understand the risks and have secured your OctoPrint instance with a strong password and HTTPS.
+	</div>
+
+	<p>
+		This plugin attempts to automatically forward a port on your router using UPnP, allowing access to OctoPrint from outside your local network.
+		Configure the internal port (used by OctoPrint) and the external port (publicly visible) below.
+		You'll have to restart OctoPrint in order for these settings to take effect.
+	</p>
+
+	<div class="control-group">
+		<label class="control-label" for="settings_plugin_riskyupnpforward_internal_port">Internal Port</label>
+		<div class="controls">
+			<input type="number" id="settings_plugin_riskyupnpforward_internal_port"
+				   data-bind="value: settings.plugins.riskyupnpforward.internal_port" />
+			<span class="help-block">This is the port OctoPrint is running on (usually 5000 or 80).</span>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label class="control-label" for="settings_plugin_riskyupnpforward_external_port">External Port</label>
+		<div class="controls">
+			<input type="number" id="settings_plugin_riskyupnpforward_external_port"
+				   data-bind="value: settings.plugins.riskyupnpforward.external_port" />
+			<span class="help-block">This is the port that will be exposed on your router to the public internet. It's best practice to use a DIFFERENT port from your internal port.</span>
+		</div>
+	</div>
+
+	<hr/>
+
+	<div class="control-group">
+		<label class="control-label" for="settings_plugin_riskyupnpforward_enable_on_startup">Enable on Startup</label>
+		<div class="controls">
+			<input type="checkbox" id="settings_plugin_riskyupnpforward_enable_on_startup"
+				   data-bind="checked: settings.plugins.riskyupnpforward.enable_on_startup" />
+			<span class="help-block">Enable automatic port forwarding every time OctoPrint starts.</span>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label class="control-label" for="settings_plugin_riskyupnpforward_remove_on_shutdown">Remove on Shutdown</label>
+		<div class="controls">
+			<input type="checkbox" id="settings_plugin_riskyupnpforward_remove_on_shutdown"
+				   data-bind="checked: settings.plugins.riskyupnpforward.remove_on_shutdown" />
+			<span class="help-block">Try to remove the port mapping when OctoPrint shuts down.</span>
+		</div>
+	</div>
+
+	<hr/>
+
+<!--
+	<div class="control-group">
+		<div class="controls">
+			<button class="btn btn-primary"
+					data-bind="click: testForward">
+				Test Port Forwarding Now
+			</button>
+			<span class="help-block">
+				Runs the port forwarding immediately using the configured settings and shows the result.
+			</span>
+		</div>
+	</div>
+-->
+</div>
